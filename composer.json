@@ -1,0 +1,51 @@
+{
+    "name": "VSWTeam/:package_name",
+    "description": ":package_description",
+    "keywords": [
+        "VSWTeam",
+        ":package_name"
+    ],
+    "homepage": "https://github.com/VSWTeam/:package_name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": ":author_email",
+            "homepage": "https://github.com/VSWTeam",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VSWTeam\\Skeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VSWTeam\\Skeleton\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VSWTeam\\Skeleton\\SkeletonServiceProvider"
+            ],
+            "aliases": {
+                "Skeleton": "VSWTeam\\Skeleton\\SkeletonFacade"
+            }
+        }
+    }
+}
